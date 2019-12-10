@@ -1,15 +1,19 @@
 
-public class Account extends Student {
-
+public class Account  {
+    private String id;
     private String username;
     private String password;
-    char exam;
-    int name;
 
-    Account(String id, String name, String surname, String username, String password) {
-        super(id, name, surname);
+
+    Account(String id, String username, String password) {
+        this.id=id;
         this.username = username;
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return id + "@" + username + "@" + password + "\n";
     }
 
     
@@ -26,7 +30,6 @@ public class Account extends Student {
   
     
     public void setPassword(String password) {
-        this.password=null;
         this.password = password;
     }
 

@@ -157,7 +157,7 @@ public class LoginUI extends javax.swing.JFrame {
         jPanel19 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         VathmologiesPianakasMathimaton = new javax.swing.JList();
-        gradeNum = new javax.swing.JComboBox<String>();
+        gradeNum = new javax.swing.JComboBox<>();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
         jLabel36 = new javax.swing.JLabel();
@@ -199,6 +199,9 @@ public class LoginUI extends javax.swing.JFrame {
         pro = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         mathima = new javax.swing.JLabel();
+        Button28 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        errormsg2 = new javax.swing.JLabel();
         Login = new javax.swing.JPanel();
         Password = new javax.swing.JPasswordField();
         Username = new javax.swing.JTextField();
@@ -1365,7 +1368,7 @@ public class LoginUI extends javax.swing.JFrame {
 
         jScrollPane5.setViewportView(VathmologiesPianakasMathimaton);
 
-        gradeNum.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        gradeNum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
         jButton22.setText("Αποθηκευση");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
@@ -1804,51 +1807,81 @@ public class LoginUI extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        tpro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tproMouseClicked(evt);
+            }
+        });
         jScrollPane9.setViewportView(tpro);
 
         jLabel44.setText("όρισε προαπαιτούμενο:");
+
+        Button28.setText("Επιστροφή");
+        Button28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button28ActionPerformed(evt);
+            }
+        });
+
+        jButton29.setText("Αποθήκευση");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+
+        errormsg2.setForeground(new java.awt.Color(204, 0, 0));
+        errormsg2.setText(" ");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel8Layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(mathima, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pro, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 176, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel8Layout.createSequentialGroup()
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane4))))
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel8Layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(mathima, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(pro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(254, 254, 254)
+                        .addComponent(errormsg2, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(Button28)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton29)
+                        .addGap(181, 181, 181)))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(46, 46, 46)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                                .addComponent(mathima, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                                .addComponent(pro, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(mathima, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pro, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(errormsg2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Button28)
+                    .addComponent(jButton29))
+                .addGap(34, 34, 34))
         );
 
         javax.swing.GroupLayout ProapaitoumenaLayout = new javax.swing.GroupLayout(Proapaitoumena.getContentPane());
@@ -1884,11 +1917,6 @@ public class LoginUI extends javax.swing.JFrame {
                 PasswordActionPerformed(evt);
             }
         });
-        Password.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                PasswordKeyPressed(evt);
-            }
-        });
 
         Username.setText("Enter your Username");
         Username.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -1899,11 +1927,6 @@ public class LoginUI extends javax.swing.JFrame {
                 UsernameFocusLost(evt);
             }
         });
-        Username.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                UsernameKeyPressed(evt);
-            }
-        });
 
         LoginButton.setBackground(new java.awt.Color(153, 204, 255));
         LoginButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1911,11 +1934,6 @@ public class LoginUI extends javax.swing.JFrame {
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginButtonActionPerformed(evt);
-            }
-        });
-        LoginButton.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                LoginButtonKeyPressed(evt);
             }
         });
 
@@ -1972,7 +1990,7 @@ public class LoginUI extends javax.swing.JFrame {
                     .addGroup(LoginLayout.createSequentialGroup()
                         .addGap(176, 176, 176)
                         .addComponent(jLabel37)))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
         LoginLayout.setVerticalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2009,7 +2027,9 @@ public class LoginUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -2068,26 +2088,6 @@ public class LoginUI extends javax.swing.JFrame {
         StoixiaFoititi.setVisible(false);
     }//GEN-LAST:event_EpistrofiStoixiaFoititiActionPerformed
 
-    private void LoginButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginButtonKeyPressed
-        // TODO add your handling code here:
-        login(evt);
-
-    }//GEN-LAST:event_LoginButtonKeyPressed
-
-    private void UsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UsernameKeyPressed
-        // TODO add your handling code here:
-
-        login(evt);
-
-    }//GEN-LAST:event_UsernameKeyPressed
-
-    private void PasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PasswordKeyPressed
-        // TODO add your handling code here:
-
-        login(evt);
-
-    }//GEN-LAST:event_PasswordKeyPressed
-
     private void BackToStudentHomeFromAllagiKodikouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToStudentHomeFromAllagiKodikouActionPerformed
         // TODO add your handling code here:
         StudentHomeUI.setVisible(true);
@@ -2125,7 +2125,7 @@ public class LoginUI extends javax.swing.JFrame {
 
         String str[] = templine.split("@");
         // Girnaei ena antikeimeno temp
-        Account temp = new Account(str[0], str[1], str[2], str[3], str[4]);
+        Account temp = new Account(str[0], str[1], str[2]);
         return temp;
 
     }
@@ -2412,18 +2412,6 @@ public class LoginUI extends javax.swing.JFrame {
         StudentHomeUI.setVisible(true);
     }//GEN-LAST:event_EpistrofhDilwseisActionPerformed
 
-    private void UsernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_UsernameFocusGained
-        if(Username.getText().equals("Enter your Username")){
-            Username.setText("");
-        }
-    }//GEN-LAST:event_UsernameFocusGained
-
-    private void UsernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_UsernameFocusLost
-        if (Username.getText().equals("")){
-            Username.setText("Enter your Username");
-        }
-    }//GEN-LAST:event_UsernameFocusLost
-
     private void PasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PasswordFocusGained
         if(Password.getText().equals("********")){
             Password.setText("");
@@ -2567,7 +2555,7 @@ public class LoginUI extends javax.swing.JFrame {
         try {
             Proapaitoumena.setVisible(true);
             Gramatia.setVisible(false);
-            Proapaitoumena.setSize(800,500);
+            Proapaitoumena.setSize(920,720);
             DefaultTableModel table = (DefaultTableModel) tmathima.getModel();
             DefaultTableModel table1 = (DefaultTableModel) tpro.getModel();
 
@@ -2590,8 +2578,59 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void tmathimaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tmathimaMouseClicked
         mathima.setText((String)tmathima.getValueAt(tmathima.getSelectedRow(),0)+" "+(String)tmathima.getValueAt(tmathima.getSelectedRow(),1));
-        
+        st1=(String)tmathima.getValueAt(tmathima.getSelectedRow(),0);
     }//GEN-LAST:event_tmathimaMouseClicked
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        try {
+            Clone(fcoursesfilename);
+            FileWriter fw = new FileWriter(fcoursesfilename);//**************
+            BufferedReader br=new BufferedReader(new FileReader(tempfilename));
+            String line;
+                while ((line = br.readLine()) != null) {
+                    String array[]=line.split("@");                           
+                    if(array[0].equals(st1)){
+                        fw.write(array[0]+"@"+array[1]+"@"+(String)tpro.getValueAt(tpro.getSelectedRow(),0)+"@"+(String)tpro.getValueAt(tpro.getSelectedRow(),1)+"\n");
+                    }else{
+                        fw.write(line+"\n");
+                    }
+                }
+            fw.close();
+            br.close();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void tproMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tproMouseClicked
+        String st2=(String)tpro.getValueAt(tpro.getSelectedRow(),0);
+        if(!st1.equals(st2)){
+            pro.setText(st2+" "+(String)tpro.getValueAt(tpro.getSelectedRow(),1));
+            errormsg2.setText("");
+        }else{
+            errormsg2.setText("ΔΕΝ ΜΠΟΡΕΙΤΕ ΝΑ ΒΑΛΕΤΕ ΠΡΟΑΙΡΕΤΙΚΟ ΜΑΘΗΜΑ ΤΟΝ ΕΑΥΤΟ ΤΟΥ");
+            pro.setText("");
+        }
+    }//GEN-LAST:event_tproMouseClicked
+
+    private void Button28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button28ActionPerformed
+        Proapaitoumena.setVisible(false);
+        Gramatia.setVisible(true);
+        Gramatia.setSize(400,600);
+    }//GEN-LAST:event_Button28ActionPerformed
+
+    private void UsernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_UsernameFocusLost
+        if (Username.getText().equals("")){
+            Username.setText("Enter your Username");
+        }
+    }//GEN-LAST:event_UsernameFocusLost
+
+    private void UsernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_UsernameFocusGained
+        if(Username.getText().equals("Enter your Username")){
+            Username.setText("");
+        }
+    }//GEN-LAST:event_UsernameFocusGained
 
     private void ChangePasswordSave() {
 
@@ -2625,7 +2664,7 @@ public class LoginUI extends javax.swing.JFrame {
     public void Clone(String src) throws FileNotFoundException, IOException{
         
         FileWriter fw=new FileWriter(tempfilename);
-        BufferedReader reader=new BufferedReader(new FileReader(new File(filename)));
+        BufferedReader reader=new BufferedReader(new FileReader(new File(src)));
         String str;
         while((str=reader.readLine())!=null){
             fw.write(str+"\n");
@@ -2636,68 +2675,35 @@ public class LoginUI extends javax.swing.JFrame {
     }
 
     private void login() {
-
-        try {
-            File file = new File(filename);
-
-            sc = new Scanner(file);
-            while (sc.hasNextLine()) {
+        if(Username.getText().equals("admin") && Password.getText().equals("admin")){
+                Gramatia.setVisible(true);
+                Gramatia.setSize(365,600);
+                this.setVisible(false);
+        }else{
+            sc = new Scanner(fid);
+            while (sc.hasNext()) {
                 String[] str = sc.nextLine().split("@");
+                //acobj=new Account(str[0],str[1],str[2]);
 
-                if(Username.getText().equals("admin") && Password.getText().equals("admin")){
-                    Gramatia.setVisible(true);
-                    Gramatia.setSize(365,424);
-                    this.setVisible(false);
-                 
+                if (str[1].equals(Username.getText()) && (str[2].equals(Password.getText()))) {
+                    Scanner sc2 = new Scanner(filename);
+                    while (sc2.hasNextLine()) {
+                        String[] str2 = sc2.nextLine().split("@");
+                        obj= new Student(str2[0],str2[1],str[2]);
 
-                }else if (str[4].equals(Username.getText()) && (str[5].equals(Password.getText()))) {
-                    obj = new Account(str[0], str[1], str[2], str[3], str[4]);
+                        StudentHomeUI.setVisible(true);
+                        this.setVisible(false);
 
-                    StudentHomeUI.setVisible(true);
-                    this.setVisible(false);
-                    //Aggelis Zotis  Pernaei sta label stoixia fitit
-                    Username1.setText(obj.getUsername());
-                    Name.setText(obj.getName());
-                    Surname.setText(obj.getSurname());
-//                    Eksamino.setText(String.valueOf(obj.getExam()));
+                        Username1.setText(acobj.getUsername());
+                        Name.setText(obj.getName());
+                        Surname.setText(obj.getSurname());
+                    }
+
                 }else{
                     errormsg1.setText("Wrong Username or Password");
                 }
             }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    private void login(KeyEvent evt) {
-
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-
-            try {
-                File file = new File(filename);
-
-                sc = new Scanner(file);
-                while (sc.hasNextLine()) {
-                    String[] str = sc.nextLine().split("@");
-
-                    if (str[4].equals(Username.getText()) && (str[5].equals(Password.getText()))) {
-                        obj = new Account(str[0], str[1], str[2], str[3], str[4]);
-
-                        StudentHomeUI.setVisible(true);
-                        this.setVisible(false);
-                        //Aggelis Zotis  Pernaei sta label stoixia fitit
-                        Username1.setText(obj.getUsername());
-                        Name.setText(obj.getName());
-                        Surname.setText(obj.getSurname());
-//                        Eksamino.setText(String.valueOf(obj.getExam()));
-                    }
-                }
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-
-       
     }
     public void create(){
     
@@ -2723,6 +2729,17 @@ public class LoginUI extends javax.swing.JFrame {
                 fw1.write(st[i].toString());
             }
             fw1.close();
+               
+            Account ac[]=new Account[3];
+            ac[0]=new Account("151234","111","111");
+            ac[1]=new Account("163217","222","222");
+            ac[2]=new Account("172278","333","333");
+            
+            FileWriter fw2=new FileWriter(fid);
+            for(int i=0; i<ac.length;i++){
+                fw2.write(ac[i].toString());
+            }
+            fw2.close();
             
         } catch (IOException ex) {
             Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -2730,16 +2747,20 @@ public class LoginUI extends javax.swing.JFrame {
 
     }
 
-    Account obj;
+    String st1;
+    Student obj;
+    Account acobj;
     Scanner sc;
     File tempfile=new File("temp2.txt");
     File file=new File("foitites.txt");
     File fcourses=new File("courses.txt");
+    File id=new File("id.txt");
     
     String tempfilename=tempfile.getAbsolutePath();//**************
     String filename=file.getAbsolutePath();//**************
-   String fcoursesfilename=fcourses.getAbsolutePath();//**************
-    
+    String fcoursesfilename=fcourses.getAbsolutePath();//**************
+    String fid=id.getAbsolutePath();//**************
+
     ImageIcon icon = new ImageIcon("androidBook.jpg");
     int idapoGrammatia;
 
@@ -2779,6 +2800,7 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JDialog Aitiseis;
     private javax.swing.JButton AllagiKodikouButton;
     private javax.swing.JButton BackToStudentHomeFromAllagiKodikou;
+    private javax.swing.JButton Button28;
     private javax.swing.JDialog ChangePassword;
     private javax.swing.JPasswordField ChangePassword1;
     private javax.swing.JPasswordField ChangePassword2;
@@ -2823,6 +2845,7 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JTextField epassword;
     private javax.swing.JLabel errorDil;
     private javax.swing.JLabel errormsg1;
+    private javax.swing.JLabel errormsg2;
     private javax.swing.JTextField esurname;
     private javax.swing.JTextField eusername;
     private javax.swing.JLabel gerror;
@@ -2855,6 +2878,7 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
