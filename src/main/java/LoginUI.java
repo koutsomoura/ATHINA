@@ -2102,10 +2102,9 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void LogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutButtonActionPerformed
-        // TODO add your handling code here:
-        //Aggelis Zotis
+        Exit e = null ;
         this.setVisible(true);
-        StudentHomeUI.setVisible(false);
+        StudentHomeUI.setVisible(e.exit());
     }//GEN-LAST:event_LogoutButtonActionPerformed
 
     private void EpistrofiStoixiaFoititiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EpistrofiStoixiaFoititiActionPerformed
@@ -2559,8 +2558,9 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        this.setVisible(true);
-        Gramatia.setVisible(false);
+        Exit e = null ;
+        this.setVisible(true);     
+        Gramatia.setVisible(e.exit());
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed

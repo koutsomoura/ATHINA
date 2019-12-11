@@ -10,8 +10,12 @@
  * @author Theopas
  */
 public class Exit {
-    public void exit(){
-        System.exit(1);
+    boolean status;
+    Exit (){
+        status=true;
+    }
+    boolean exit(){
+        return false;
     }
 
 }
