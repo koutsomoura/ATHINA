@@ -9,10 +9,12 @@ public class Courses {
     private String proname;
    
 
-    Courses(String id, String name) {
-        this.cid = id;
+
+    Courses(String cid, String name, String proid, String proname) {
+        this.cid = cid;
         this.name = name;
-      
+        this.proid = proid;
+        this.proname = proname;
     }
 
     public void setId(String id) {
@@ -49,7 +51,7 @@ public class Courses {
     
     
   public String toString() {
-        return cid + "@" + name + "\n" ;
+        return cid + "@" + name +"@"+proid+"@"+proname+"\n" ;
     }   
     
 }

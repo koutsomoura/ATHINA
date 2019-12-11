@@ -13,7 +13,7 @@ public class Dilwseis extends Courses{
 
     
     public Dilwseis(String AM,String id, String name) {
-        super(id, name);
+        super(id, name,"null","null");
         this.AM=AM;
         dateDilwsis=formatter.format(date);
         mnm="Μη επιτυχής";
@@ -23,7 +23,7 @@ public class Dilwseis extends Courses{
     }
 
     public Dilwseis(String AM, String dateDilwsis, String mnm, String id, String name) {
-        super(id, name);
+        super(id, name,"null","null");
         this.AM = AM;
         this.dateDilwsis = dateDilwsis;
         this.mnm = mnm;
@@ -31,7 +31,7 @@ public class Dilwseis extends Courses{
     }
 
     public Dilwseis(String AM, String dateDilwsis, String mnm, String dateEjetasi, double grade, String id, String name) {
-        super(id, name);
+        super(id, name,"null","null");
         this.AM = AM;
         this.dateDilwsis = dateDilwsis;
         this.mnm = mnm;
