@@ -1,5 +1,6 @@
 # ATHINA
-Ολοκλήρωσα την Εισαγωγή  προαπαιτούμενων  μαθήματος απο την γραμματεία
+Leptomeries gia to  Login (petaei to error otan kaneis kai aposindesi) 
+Protino na kanoume ola ta layout se paromoio megethos, min einai to ena terasio kai meta periorizete se ena mikro menu
 
 
 
