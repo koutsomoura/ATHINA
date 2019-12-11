@@ -3,20 +3,20 @@
 
 
 public class Courses {
-    String id;
-    String name;
-    String proid;
-    String proname;
+    private String cid;
+    private String name;
+    private String proid;
+    private String proname;
    
 
     Courses(String id, String name) {
-        this.id = id;
+        this.cid = id;
         this.name = name;
       
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.cid = id;
     }
 
     public void setName(String name) {
@@ -32,7 +32,7 @@ public class Courses {
     }
 
     public String getId() {
-        return id;
+        return cid;
     }
 
     public String getName() {
@@ -49,7 +49,7 @@ public class Courses {
     
     
   public String toString() {
-        return id + "@" + name + "\n" ;
+        return cid + "@" + name + "\n" ;
     }   
     
 }

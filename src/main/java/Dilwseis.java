@@ -4,18 +4,28 @@ import java.util.Date;
 
 public class Dilwseis extends Courses{
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
-    Date date = new Date();  
+    Date date = new Date(); 
+    Courses c;
+    String AM;
     String dateDilwsis;
     String mnm;
     String dateEjetasi;
     double grade;
-    public Dilwseis(String id, String name) {
+
+    
+    public Dilwseis(String AM,String id, String name) {
         super(id, name);
+        this.AM=AM;
         dateDilwsis=formatter.format(date);
         mnm="Μη επιτυχής";
         dateEjetasi="";
         grade=0.0;
         
+    }
+
+    @Override
+    public String toString() {
+        return AM+"@"+dateDilwsis+"@"+mnm+"@"+dateEjetasi+"@"+grade+"@";
     }
 
    

@@ -1444,11 +1444,11 @@ public class LoginUI extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Μαθημάτα"
+                "Μαθημάτα", ""
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class
+                java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1473,7 +1473,7 @@ public class LoginUI extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Προσθέστε:"
+                "Προσθέστε:", ""
             }
         ));
         table11.setSelectionBackground(new java.awt.Color(153, 204, 255));
@@ -1516,33 +1516,33 @@ public class LoginUI extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE)
+                    .addComponent(jScrollPane7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                        .addComponent(p, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                        .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(195, 195, 195)
+                .addComponent(EpistrofhDilwseis, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ipoboliB, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(218, 218, 218))
+            .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(255, 255, 255)
                         .addComponent(jLabel3))
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(errorDil, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(132, 132, 132)
-                                .addComponent(EpistrofhDilwseis, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(78, 78, 78)
-                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addComponent(ipoboliB, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(p, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                        .addGap(276, 276, 276)
+                        .addComponent(errorDil, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1557,24 +1557,26 @@ public class LoginUI extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ipoboliB, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EpistrofhDilwseis, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(errorDil)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EpistrofhDilwseis, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ipoboliB, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout DilwseisLayout = new javax.swing.GroupLayout(Dilwseis.getContentPane());
         Dilwseis.getContentPane().setLayout(DilwseisLayout);
         DilwseisLayout.setHorizontalGroup(
             DilwseisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         DilwseisLayout.setVerticalGroup(
             DilwseisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(DilwseisLayout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         Epe3ergasia3.setMinimumSize(new java.awt.Dimension(490, 470));
@@ -2292,18 +2294,28 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_StudenttableMouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        StudentHomeUI.setVisible(false);
-        Dilwseis.setVisible(true);
-        Dilwseis.setSize(808,535);
-        p.setText("<html>Για να δηλώσετε τα μαθήματα πατήστε στο πίνακα \"Δηλώσεις Μαθημάτων\"<br> click στο κελί με το μάθημα που θέλετε να προσθέσετε</html>");
-        p1.setText("<html>Για να Διαγράψετε ενα απο τα μαθήματα που επιλέξατε πατήστε click<br> στο κελί με το μάθημα που θέλετε να αφαιρέσετε</html>");
- 
-        DefaultTableModel table = (DefaultTableModel) table10.getModel();
-
+        try {
+            StudentHomeUI.setVisible(false);
+            Dilwseis.setVisible(true);
+            Dilwseis.setSize(1000,550);
+            p.setText("<html>Για να δηλώσετε τα μαθήματα πατήστε στο πίνακα \"Δηλώσεις Μαθημάτων\"<br> click στο κελί με το μάθημα που θέλετε να προσθέσετε</html>");
+            p1.setText("<html>Για να Διαγράψετε ενα απο τα μαθήματα που επιλέξατε πατήστε click<br> στο κελί με το μάθημα που θέλετε να αφαιρέσετε</html>");
+            
+            DefaultTableModel table = (DefaultTableModel) table10.getModel();
+            
             table10.setDefaultEditor(String.class, null);
-           /* for (int i=0;i<listodcourses.length;i++){
-                table.addRow(new String[]{listodcourses[i].id+"  "+listodcourses[i].name});
-            }*/
+            sc=new Scanner(fcourses);
+            while(sc.hasNext()){
+                String array[]=sc.nextLine().split("@");
+                Courses c=new Courses(array[0],array[1]);
+                table.addRow(new String[]{c.getId(),c.getName()});
+
+            }
+          
+    
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -2352,14 +2364,13 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void table10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table10MouseClicked
-        int index=table10.getSelectedRow();
-        String h=(String)table10.getValueAt(index, 0);
+        String h=(String)table10.getValueAt(table10.getSelectedRow(), 0);
 
         DefaultTableModel modeltable11 = (DefaultTableModel) table11.getModel();
         table11.setDefaultEditor(String.class, null);
         
         if(existsInTable(table11,h)){
-            //modeltable11.addRow(new Object[]{listodcourses[index].id+"  "+listodcourses[index].name});
+            modeltable11.addRow(new Object[]{table10.getValueAt(table10.getSelectedRow(), 0),table10.getValueAt(table10.getSelectedRow(), 1)});
             errorDil.setText("");
         }else{
             errorDil.setText("Δεν μπορείτε να προσθέσετε το ίδιο μάθημα δυο φορές");
@@ -2383,31 +2394,55 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_table11MouseClicked
 
     private void ipoboliBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ipoboliBActionPerformed
-        FileWriter fw=null;
-        try {
-//            File courses=new File(obj.getId()+"_courses.txt");
-//            fw = new FileWriter(courses.getAbsolutePath());
+        try {                                         
+           
+            FileWriter fw=new FileWriter(dilo,true);
+            
             for(int i=0;i<table11.getRowCount();i++){
-                String array[]=(table11.getValueAt(i, 0)).toString().split("  ");
-              
-                fw.write(array[0]+"@"+array[1]+"@"+array[2]+"@"+"null"+"\n");
+                Courses c=new Courses((String)table11.getValueAt(i, 0),(String)table11.getValueAt(i, 1));
+
+                if(CheckIfAlradeyIN((String) table11.getValueAt(i, 0))){
+                    Dilwseis newDilosi=new Dilwseis(obj.getId(),c.getId(),c.getName());
+                    fw.write(newDilosi.toString()+c.toString());
+                    JOptionPane.showMessageDialog(null, "Η Δηλωση του μαθήματος "+c.getName()+" αποθηκεύτηκε με επιτυχία");
+
+                }else{
+                    JOptionPane.showMessageDialog(null, "Η Δηλωση του μαθήματος "+c.getName()+" δεν έγινε καθώς το έτεχε περάσει επιτυχώς");
+
+                }
             }
-            JOptionPane.showMessageDialog(null, "Η Δηλωσεις σας αποθηκεύτηκε με επιτυχία");
+            fw.close();
+          
             Dilwseis.setVisible(false);
             StudentHomeUI.setVisible(true);
-            
-        } catch (IOException ex) {
-            Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                fw.close();
+
             } catch (IOException ex) {
                 Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
     }//GEN-LAST:event_ipoboliBActionPerformed
 
+    public boolean CheckIfAlradeyIN(String str){
+        try {
+            sc=new Scanner(dilo);
+          
+            while(sc.hasNext()){
+                String array[]=sc.nextLine().split("@"); 
+                if(array[0].equals(obj.getId()) && array[5].equals(str) && array[2].equals("Επιτυχής")){
+                   return false;
+                }
+                
+            }
+            return true;
+    
+        }catch (FileNotFoundException ex) {
+            Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return true;
+    }
+    
     private void EpistrofhDilwseisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EpistrofhDilwseisActionPerformed
+        table11.setDefaultEditor(String.class, null);
+        table10.setDefaultEditor(String.class, null);
         Dilwseis.setVisible(false);
         StudentHomeUI.setVisible(true);
     }//GEN-LAST:event_EpistrofhDilwseisActionPerformed
@@ -2680,16 +2715,25 @@ public class LoginUI extends javax.swing.JFrame {
                 Gramatia.setSize(365,600);
                 this.setVisible(false);
         }else{
-            sc = new Scanner(fid);
+            try {
+                sc = new Scanner(id);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
             while (sc.hasNext()) {
                 String[] str = sc.nextLine().split("@");
-                //acobj=new Account(str[0],str[1],str[2]);
+                acobj=new Account(str[0],str[1],str[2]);
 
                 if (str[1].equals(Username.getText()) && (str[2].equals(Password.getText()))) {
-                    Scanner sc2 = new Scanner(filename);
-                    while (sc2.hasNextLine()) {
+                    Scanner sc2 = null;
+                    try {
+                        sc2 = new Scanner(file);
+                    } catch (FileNotFoundException ex) {
+                        Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    while (sc2.hasNext()) {
                         String[] str2 = sc2.nextLine().split("@");
-                        obj= new Student(str2[0],str2[1],str[2]);
+                        obj= new Student(str2[0],str2[1],str2[2]);
 
                         StudentHomeUI.setVisible(true);
                         this.setVisible(false);
@@ -2755,6 +2799,7 @@ public class LoginUI extends javax.swing.JFrame {
     File file=new File("foitites.txt");
     File fcourses=new File("courses.txt");
     File id=new File("id.txt");
+    File dilo=new File("Dilwseis.txt");
     
     String tempfilename=tempfile.getAbsolutePath();//**************
     String filename=file.getAbsolutePath();//**************
