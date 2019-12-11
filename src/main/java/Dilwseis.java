@@ -22,6 +22,25 @@ public class Dilwseis extends Courses{
         
     }
 
+    public Dilwseis(String AM, String dateDilwsis, String mnm, String id, String name) {
+        super(id, name);
+        this.AM = AM;
+        this.dateDilwsis = dateDilwsis;
+        this.mnm = mnm;
+        dateEjetasi=formatter.format(date);
+    }
+
+    public Dilwseis(String AM, String dateDilwsis, String mnm, String dateEjetasi, double grade, String id, String name) {
+        super(id, name);
+        this.AM = AM;
+        this.dateDilwsis = dateDilwsis;
+        this.mnm = mnm;
+        this.dateEjetasi = dateEjetasi;
+        this.grade = grade;
+    }
+
+
+
 
     public void setAM(String AM) {
         this.AM = AM;

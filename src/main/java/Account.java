@@ -16,8 +16,9 @@ public class Account  {
         return id + "@" + username + "@" + password + "\n";
     }
 
-    
-
+    public String getId() {
+        return id;
+    }
      
     public String getUsername() {
         return username;

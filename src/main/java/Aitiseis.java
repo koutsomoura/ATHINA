@@ -10,7 +10,7 @@ public class Aitiseis {
     private String name;
     private char exam;
 
-    public Aitiseis(String email, String surname, String name, char exam) {
+    public Aitiseis(String email, String surname, String name) {
         this.email = email;
         this.surname = surname;
         this.name = name;
