@@ -931,8 +931,9 @@ public class LoginUI extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        jPanel14.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 160, 40));
+        jPanel14.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 160, 40));
 
+        jButton21.setBackground(new java.awt.Color(153, 204, 255));
         jButton21.setText("Εισαγωγή Προαπαιτουμενου Μαθήματος");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -941,6 +942,7 @@ public class LoginUI extends javax.swing.JFrame {
         });
         jPanel14.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 270, 50));
 
+        jButton25.setBackground(new java.awt.Color(153, 204, 255));
         jButton25.setText("Εισαγωγή Μαθήματος");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2342,7 +2344,7 @@ public class LoginUI extends javax.swing.JFrame {
             int i=Studenttable.getSelectedRow();
            
             try {
-                Scanner sc = new Scanner(file);
+                sc = new Scanner(file);
                 String line;
                 int j=0;
                 while ((line=sc.nextLine())!=null) {
@@ -2372,9 +2374,12 @@ public class LoginUI extends javax.swing.JFrame {
             p.setText("<html>Για να δηλώσετε τα μαθήματα πατήστε στο πίνακα \"Δηλώσεις Μαθημάτων\"<br> click στο κελί με το μάθημα που θέλετε να προσθέσετε</html>");
             p1.setText("<html>Για να Διαγράψετε ενα απο τα μαθήματα που επιλέξατε πατήστε click<br> στο κελί με το μάθημα που θέλετε να αφαιρέσετε</html>");
             
-            DefaultTableModel table = (DefaultTableModel) table10.getModel();
+            DefaultTableModel table2 = (DefaultTableModel) table11.getModel();
+            table2.setRowCount(0);
             
-            table10.setDefaultEditor(String.class, null);
+            DefaultTableModel table = (DefaultTableModel) table10.getModel();
+            table.setRowCount(0);
+            //table10.setDefaultEditor(String.class, null);
             sc=new Scanner(fcourses);
             while(sc.hasNext()){
                 String array[]=sc.nextLine().split("@");
@@ -2479,8 +2484,10 @@ public class LoginUI extends javax.swing.JFrame {
             for(int i=0;i<table11.getRowCount();i++){
                 Courses c=new Courses((String)table11.getValueAt(i, 0),(String)table11.getValueAt(i, 1));
 
-                if(CheckIfAlradeyIN((String) table11.getValueAt(i, 0))){
+                if(CheckIfAlradeyPASS((String) table11.getValueAt(i, 0))){
                     Dilwseis newDilosi=new Dilwseis(obj.getId(),c.getId(),c.getName());
+                    if(){
+                    }
                     fw.write(newDilosi.toString()+c.toString());
                     JOptionPane.showMessageDialog(null, "Η Δηλωση του μαθήματος "+c.getName()+" αποθηκεύτηκε με επιτυχία");
 
@@ -2493,13 +2500,19 @@ public class LoginUI extends javax.swing.JFrame {
           
             Dilwseis.setVisible(false);
             StudentHomeUI.setVisible(true);
-
+            
             } catch (IOException ex) {
                 Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
             }
     }//GEN-LAST:event_ipoboliBActionPerformed
-
-    public boolean CheckIfAlradeyIN(String str){
+    
+    public boolean CheckIfAlradeyIsIN(String str){
+        sc=new Scanner(dil);
+        while(sc.hasNext()){
+            
+        }
+    }
+    public boolean CheckIfAlradeyPASS(String str){
         try {
             sc=new Scanner(dilo);
           
@@ -2568,11 +2581,11 @@ public class LoginUI extends javax.swing.JFrame {
             Gramatia.setVisible(false);
              try {
            
-            File file = new File(filename);
+            //File file = new File(filename);
             DefaultTableModel table = (DefaultTableModel) Studenttable1.getModel();
 
             Studenttable1.setDefaultEditor(Object.class, null);
-            Scanner sc = new Scanner(file);
+            sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String[] str = sc.nextLine().split("@");
                  table.addRow(new Object[]{str[0],str[1],str[2]});
