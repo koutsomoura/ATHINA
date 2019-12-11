@@ -155,12 +155,12 @@ public class LoginUI extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         EpeksergasiaVathmologies = new javax.swing.JDialog();
         jPanel19 = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        VathmologiesPianakasMathimaton = new javax.swing.JList();
-        gradeNum = new javax.swing.JComboBox<>();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
         jLabel36 = new javax.swing.JLabel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        VathmologiesPianakasMathimaton = new javax.swing.JTable();
+        gradeNum = new javax.swing.JSpinner();
         Dilwseis = new javax.swing.JDialog();
         jPanel10 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -202,6 +202,8 @@ public class LoginUI extends javax.swing.JFrame {
         Button28 = new javax.swing.JButton();
         jButton29 = new javax.swing.JButton();
         errormsg2 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         Login = new javax.swing.JPanel();
         Password = new javax.swing.JPasswordField();
         Username = new javax.swing.JTextField();
@@ -1366,46 +1368,69 @@ public class LoginUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jScrollPane5.setViewportView(VathmologiesPianakasMathimaton);
-
-        gradeNum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
-
-        jButton22.setText("Αποθηκευση");
+        jButton22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton22.setText("Αποθήκευση");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
             }
         });
 
-        jButton23.setText("Ακυροση");
+        jButton23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton23.setText("Ακύρωση");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
             }
         });
 
-        jLabel36.setText("jLabel36");
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel36.setText("'Ορισε Βαθμολογία:");
+
+        VathmologiesPianakasMathimaton.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "AM", "ID", "TITLE"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane11.setViewportView(VathmologiesPianakasMathimaton);
+
+        gradeNum.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        gradeNum.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(0.0f), Float.valueOf(0.0f), Float.valueOf(20.0f), Float.valueOf(0.100000024f)));
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(9, 9, 9)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 598, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
+                                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(46, 46, 46))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
+                                .addComponent(jLabel36)
+                                .addGap(121, 121, 121))))
                     .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addComponent(gradeNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                        .addComponent(jButton22))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addComponent(jLabel36)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(165, 165, 165)
+                        .addComponent(gradeNum, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1413,15 +1438,18 @@ public class LoginUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addComponent(jLabel36)
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(gradeNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton22))
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(44, Short.MAX_VALUE))
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(gradeNum, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton23))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(68, 68, 68))))
         );
 
         javax.swing.GroupLayout EpeksergasiaVathmologiesLayout = new javax.swing.GroupLayout(EpeksergasiaVathmologies.getContentPane());
@@ -1432,7 +1460,7 @@ public class LoginUI extends javax.swing.JFrame {
         );
         EpeksergasiaVathmologiesLayout.setVerticalGroup(
             EpeksergasiaVathmologiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
@@ -1639,9 +1667,9 @@ public class LoginUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(37, 37, 37)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
@@ -1896,6 +1924,19 @@ public class LoginUI extends javax.swing.JFrame {
             ProapaitoumenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane10.setViewportView(jTable2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LoginUI");
@@ -2331,14 +2372,15 @@ public class LoginUI extends javax.swing.JFrame {
 
                try {
 
-                FileWriter fw = new FileWriter(idapoGrammatia+"_courses2.txt");
-                   Scanner sc = new Scanner(idapoGrammatia+"_courses.txt");
-                   String line;
-                   //int j=0;
+                Clone(fdilo);
+                sc =new Scanner(tempfile);
+                FileWriter fw= new FileWriter(dilo);
+                String line;
+                
                    while ((line=sc.nextLine())!=null) {
 
                        String[] str =line.split("@");
-                       if(/*(str[0]).equals(listodcourses[VathmologiesPianakasMathimaton.getSelectedIndex()].id)*/ true){
+                       if(){
 
                                 String newobj = str[0] + "@" + str[1] + "@" + str[2]+ "@" + gradeNum.getSelectedItem()+  "\n";
                                 fw.write(newobj);   
@@ -2509,41 +2551,31 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void Studenttable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Studenttable1MouseClicked
-        EpeksergasiaVathmologies.setVisible(true);
-        EpeksergasiaVathmologies.setSize(450,400);
-        Epe3ergasia3.setVisible(false);
-
-        int i=Studenttable1.getSelectedRow();
-        Scanner sc = new Scanner(filename);
-        String line;
-        int j=0;
-        while ((line=sc.nextLine())!=null) {
-            String[] str =line.split("@");
-            if(j==i){
-                idapoGrammatia=Integer.parseInt(str[0]);
-                break;
+        try {
+            EpeksergasiaVathmologies.setVisible(true);
+            EpeksergasiaVathmologies.setSize(900,340);
+            Epe3ergasia3.setVisible(false);
+            
+            
+            String student_id= (String) Studenttable1.getValueAt(Studenttable1.getSelectedRow(), 0);
+            
+            sc =new Scanner(dilo);
+           
+            DefaultTableModel table = (DefaultTableModel) VathmologiesPianakasMathimaton.getModel();
+            VathmologiesPianakasMathimaton.setDefaultEditor(String.class, null);
+            
+            while (sc.hasNextLine()) {
+                String[] str = sc.nextLine().split("@");
+                
+                if(str[0].equals(student_id)){
+                    table.addRow(new Object[]{str[0],str[5],str[6]});
+                
+                }
             }
-            j++;
-        }
-        sc.close();
-   
-
-        /*DefaultTableModel table = (DefaultTableModel) GradeTable.getModel();
-        
-        GradeTable.setDefaultEditor(Object.class, null);
-        Scanner rsc = new Scanner();
-        
-        if (table.getRowCount() > 0) {
-        while (table.getRowCount() > 0) {
-        table.removeRow(0);
-        }
-        }
-        
-        while (sc.hasNextLine()) {
-        String[] str = sc.nextLine().split("@");
-        table.addRow(new Object[]{str[0], str[1], str[2]});
-        
-        }            }*/
+            VathmologiesPianakasMathimaton.setModel(table);
+         } catch (FileNotFoundException ex) {
+                Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+        }        
     }//GEN-LAST:event_Studenttable1MouseClicked
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -2805,7 +2837,7 @@ public class LoginUI extends javax.swing.JFrame {
     String filename=file.getAbsolutePath();//**************
     String fcoursesfilename=fcourses.getAbsolutePath();//**************
     String fid=id.getAbsolutePath();//**************
-
+    String fdilo=dilo.getAbsolutePath();
     ImageIcon icon = new ImageIcon("androidBook.jpg");
     int idapoGrammatia;
 
@@ -2880,7 +2912,7 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JTextField Username;
     private javax.swing.JLabel Username1;
     private javax.swing.JDialog Vathmologies;
-    private javax.swing.JList<String> VathmologiesPianakasMathimaton;
+    private javax.swing.JTable VathmologiesPianakasMathimaton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JDialog dimiourgiaNeasAitiseis;
     private javax.swing.JTextField eexam;
@@ -2898,7 +2930,7 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JTextField gid;
     private javax.swing.JTextField gname;
     private javax.swing.JTextField gpassword;
-    private javax.swing.JComboBox<String> gradeNum;
+    private javax.swing.JSpinner gradeNum;
     private javax.swing.JTextField gsurname;
     private javax.swing.JTextField gusername;
     private javax.swing.JTextField idcourse;
@@ -2995,16 +3027,18 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel mathima;
     private javax.swing.JButton newaitisi;

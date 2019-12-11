@@ -5,7 +5,6 @@ import java.util.Date;
 public class Dilwseis extends Courses{
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
     Date date = new Date(); 
-    Courses c;
     String AM;
     String dateDilwsis;
     String mnm;
@@ -21,6 +20,11 @@ public class Dilwseis extends Courses{
         dateEjetasi="";
         grade=0.0;
         
+    }
+
+
+    public void setAM(String AM) {
+        this.AM = AM;
     }
 
     @Override
