@@ -1,4 +1,12 @@
+package Controler;
 
+
+import Model.Aitiseis;
+import Model.Student;
+import Model.Exit;
+import Model.Dilwseis;
+import Model.Courses;
+import Model.Account;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -18,6 +26,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+//import Model.*;
 
 public class LoginUI extends javax.swing.JFrame {
 

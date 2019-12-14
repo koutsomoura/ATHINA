@@ -1,3 +1,5 @@
+package Model;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,10 +13,10 @@
  */
 public class Exit {
     boolean status;
-    Exit (){
+    public Exit (){
         status=true;
     }
-    boolean exit(){
+    public boolean exit(){
         return false;
     }
 

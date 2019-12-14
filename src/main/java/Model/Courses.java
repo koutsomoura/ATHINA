@@ -1,3 +1,5 @@
+package Model;
+
 
 
 
@@ -10,7 +12,7 @@ public class Courses {
    
 
 
-    Courses(String cid, String name, String proid, String proname) {
+    public Courses(String cid, String name, String proid, String proname) {
         this.cid = cid;
         this.name = name;
         this.proid = proid;
