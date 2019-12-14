@@ -1,3 +1,5 @@
+package Model;
+
 
 //Maria Karaxatzi
 import java.util.ArrayList;
@@ -9,11 +11,11 @@ public class Student {
     private String surname;
 
 
-    ArrayList<String> ListOfAitiseis;
+   public ArrayList<String> ListOfAitiseis;
     Dilwseis listCourses[] = new Dilwseis[6];
     static int i = 0;
 
-    Student(String id, String name, String surname) {
+    public Student(String id, String name, String surname) {
         this.id = id;
         this.name = name;
         this.surname = surname;

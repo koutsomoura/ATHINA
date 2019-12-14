@@ -1,3 +1,5 @@
+ package Model;
+
 
 public class Account  {
     private String id;
@@ -5,7 +7,7 @@ public class Account  {
     private String password;
 
 
-    Account(String id, String username, String password) {
+  public Account(String id, String username, String password) {
         this.id=id;
         this.username = username;
         this.password = password;
